@@ -12,6 +12,7 @@ finish-args:
   - --socket=pulseaudio
   - --device=all
   - --filesystem=xdg-run/app/com.discordapp.Discord:create
+  - --env=QT_QPA_PLATFORMTHEME=xdgdesktopportal
 
 modules:
   - name: eden
