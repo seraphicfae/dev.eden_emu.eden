@@ -15,10 +15,10 @@
 	<categories>
 		<category>Games</category>
 	</categories>
-	<icon type="remote">https://eden-emu.dev/assets/logos/logo.png</icon>
+	<icon type="remote">https://git.eden-emu.dev/eden-emu/eden/raw/branch/master/dist/eden.icon/Assets/dev.eden_emu.eden.svg</icon>
 	<branding>
-		<color type="primary" scheme_preference="light">#ff00ff</color>
-		<color type="primary" scheme_preference="dark">#993d3d</color>
+		<color type="primary" scheme_preference="light">#f3edc8</color>
+		<color type="primary" scheme_preference="dark">#13161a1</color>
 	</branding>
 	<content_rating type="oars-1.1" />
 	<url type="bugtracker">https://git.eden-emu.dev/eden-emu/eden/issues</url>
@@ -30,8 +30,9 @@
 	<screenshots>
 		<screenshot type="default">
 			<image>
-				https://eden-emu.dev/assets/eden_neon_logo-62W0Oofb.webp
+			    https://raw.githubusercontent.com/seraphicfae/dev.eden_emu.eden.yml/refs/heads/main/assets/homescreen_with_game.png
 			</image>
+			<caption>Home screen</caption>
 		</screenshot>
 	</screenshots>
 	<releases>
