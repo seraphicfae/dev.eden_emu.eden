@@ -1,0 +1,3 @@
+# ignore dist
+.flatpak-builder
+build-directory
