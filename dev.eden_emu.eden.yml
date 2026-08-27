@@ -56,13 +56,8 @@ modules:
       - -DYUZU_CMD=OFF
       - -DYUZU_ROOM_STANDALONE=OFF
       - -DNIGHTLY_BUILD=OFF
-      - -DYUZU_USE_BUNDLED_SDL3=ON
       - -DYUZU_USE_BUNDLED_SDL2=OFF
       - -DVulkanHeaders_FORCE_BUNDLED=ON
-
-    secret-opts:
-      - -DYUZU_BUILD_PRESET:STRING=$BUILD_PRESET
-      - -DYUZU_SYSTEM_PROFILE:STRING=$SYSTEM_PROFILE
 
     post-install:
       - install -Dm755 ../eden-launcher.sh /app/bin/eden-launcher
@@ -75,9 +70,6 @@ modules:
         url: https://git.eden-emu.dev/eden-emu/eden.git
         tag: v0.2.1
         commit: 58c1e20ee58efa3900ba616207d460886214480b
-        x-checker-data:
-          type: git
-          tag-pattern: ^v([\d.]+(?:-rc[\d]+)?)$
 
       - type: file
         path: dev.eden_emu.eden.appdata.xml
