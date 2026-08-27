@@ -51,6 +51,7 @@ modules:
       - -DYUZU_ROOM:BOOL=ON
       - -DYUZU_ROOM_STANDALONE:BOOL=OFF
       - -DYUZU_CMD:BOOL=OFF
+      - -DVulkanHeaders_FORCE_BUNDLED:BOOL=ON
 
     secret-opts:
       - -DYUZU_BUILD_PRESET:STRING=$BUILD_PRESET
@@ -78,14 +79,24 @@ modules:
         path: eden-launcher.sh
 
       - type: archive
+        dest: .cache/cpm/sdl2/2.32.10
+        url: https://github.com/libsdl-org/SDL/archive/refs/tags/release-2.32.10.tar.gz
+        sha512: d5622d6bb7266f7942a7b8ad43e8a22524893bf0c2ea1af91204838d9b78d32768843f6faa248757427b8404b8c6443776d4afa6b672cd8571a4e0c03a829383
+
+      - type: archive
         dest: .cache/cpm/boost/1.90.0
         url: https://github.com/boostorg/boost/releases/download/boost-1.90.0/boost-1.90.0-cmake.tar.xz
         sha512: 6ae6e94664fe7f2fb01976b59b276ac5df8085c7503fa829d810fbfe495960cfec44fa2c36e2cb23480bc19c956ed199d4952b02639a00a6c07625d4e7130c2d
 
       - type: archive
-        dest: .cache/fmtlib/fmt/12.1.0
+        dest: .cache/cpm/fmt/12.1.0
         url: https://github.com/fmtlib/fmt/archive/refs/tags/12.1.0.tar.gz
         sha512: f0da82c545b01692e9fd30fdfb613dbb8dd9716983dcd0ff19ac2a8d36f74beb5540ef38072fdecc1e34191b3682a8542ecbf3a61ef287dbba0a2679d4e023f2
+
+      - type: archive
+        dest: .cache/cpm/lz4/ebb3
+        url: https://github.com/lz4/lz4/archive/ebb370ca83.tar.gz
+        sha512: 35c21a5d9cfb5bbf314a5321d02b36819491d2ee3cf8007030ca09d13ca4dae672247b7aeab553e973093604fc48221cb03dc92197c6efe8fc3746891363fdab
 
       - type: archive
         dest: .cache/cpm/nlohmann_json/3.12.0
@@ -93,14 +104,19 @@ modules:
         sha512: 6cc1e86261f8fac21cc17a33da3b6b3c3cd5c116755651642af3c9e99bb3538fd42c1bd50397a77c8fb6821bc62d90e6b91bcdde77a78f58f2416c62fc53b97d
 
       - type: archive
+        dest: .cache/cpm/openssl/3.6.0-1cb0d36b39
+        url: https://github.com/crueter-ci/OpenSSL/archive/refs/tags/v3.6.0-1cb0d36b39.tar.gz
+        sha512: 686753b060b31466f223e753f215690d15aae7ea2dc3191636c3b360606353a25252e07098e588ae1897376dd78f6ab101c68b46ef48b9e44a51edab79c7750e
+
+      - type: archive
         dest: .cache/cpm/zlib/1.3.2
         url: https://github.com/madler/zlib/archive/refs/tags/v1.3.2.tar.gz
         sha512: 16fea4df307a68cf0035858abe2fd550250618a97590e202037acd18a666f57afc10f8836cbbd472d54a0e76539d0e558cb26f059d53de52ff90634bbf4f47d4
 
       - type: archive
-        dest: .cache/cpm/xbyak/7.35.2
-        url: https://github.com/herumi/xbyak/archive/refs/tags/v7.35.2.tar.gz
-        sha512: b6475276b2faaeb315734ea8f4f8bd87ededcee768961b39679bee547e7f3e98884d8b7851e176d861dab30a80a76e6ea302f8c111483607dde969b4797ea95a
+        dest: .cache/cpm/zstd/b8d6
+        url: https://github.com/facebook/zstd/archive/b8d6101fba.tar.gz
+        sha512: cc5ad4b119a9c2ea57f0b71eeff01113bb506e0d17000159c5409cb8236d22e38c52d5e9e97e7947a4bf1b2dfc44b6c503ab2d9aedbd59458435c6a2849cb029
 
       - type: archive
         dest: .cache/cpm/enet/1.3.18
@@ -108,50 +124,19 @@ modules:
         sha512: a0d2fa8c957704dd49e00a726284ac5ca034b50b00d2b20a94fa1bbfbb80841467834bfdc84aa0ed0d6aab894608fd6c86c3b94eee46343f0e6d9c22e391dbf9
 
       - type: archive
-        dest: .cache/cpm/mbedtls/3.6.4
-        url: https://github.com/Mbed-TLS/mbedtls/releases/download/mbedtls-3.6.4/mbedtls-3.6.4.tar.bz2
-        sha512: 6671fb8fcaa832e5b115dfdce8f78baa6a4aea71f5c89a640583634cdee27aefe3bf4be075744da91f7c3ae5ea4e0c765c8fc3937b5cfd9ea73d87ef496524da
+        dest: .cache/cpm/opus/a3f0
+        url: https://github.com/xiph/opus/archive/a3f0ec02b3.tar.gz
+        sha512: 9506147b0de35befda8633ff272981cc2575c860874791bd455b752f797fd7dbd1079f0ba42ccdd7bb1fe6773fa5e84b3d75667c2883dd1fb2d0e4a5fa4f8387
 
       - type: archive
-        dest: .cache/cpm/vulkanutilitylibraries/1.4.328
-        url: https://git.crueter.xyz/scripts/VulkanUtilityHeaders/releases/download/1.4.328/VulkanUtilityHeaders.tar.zst
-        sha512: 9922217b39faf73cd4fc1510f2fdba14a49aa5c0d77f9ee24ee0512cef16b234d0cabc83c1fec861fa5df1d43e7f086ca9b6501753899119f39c5ca530cb0dae
-
-        strip-components: 0
-      - type: archive
-        dest: .cache/cpm/discordrpc/1cf7
-        url: https://github.com/eden-emulator/discord-rpc/archive/1cf7772bb6.zip
-        sha512: e9b35e6f2c075823257bcd59f06fe7bb2ccce1976f44818d2e28810435ef79c712a3c4f20f40da41f691342a4058cf86b078eb7f9d9e4dae83c0547c21ec4f97
+        dest: .cache/cpm/vulkanutilitylibraries/1.4.345
+        url: https://github.com/KhronosGroup/Vulkan-Utility-Libraries/archive/refs/tags/v1.4.345.tar.gz
+        sha512: 114f6b237a6dcba923ccc576befb5dea3f1c9b3a30de7dc741f234a831d1c2d52d8a224afb37dd57dffca67ac0df461eaaab6a5ab5e503b393f91c166680c3e1
 
       - type: archive
-        dest: .cache/cpm/simpleini/4.22
-        url: https://github.com/brofield/simpleini/archive/refs/tags/v4.22.tar.gz
-        sha512: 6c198636816a0018adbf7f735d402c64245c6fcd540b7360d4388d46f007f3a520686cdaec4705cb8cb31401b2cb4797a80b42ea5d08a6a5807c0848386f7ca1
-
-      - type: archive
-        dest: .cache/cpm/cubeb/fa02
-        url: https://github.com/mozilla/cubeb/archive/fa02160712.zip
-        sha512: 82d808356752e4064de48c8fecbe7856715ade1e76b53937116bf07129fc1cc5b3de5e4b408de3cd000187ba8dc32ca4109661cb7e0355a52e54bd81b9be1c61
-
-      - type: archive
-        dest: .cache/cpm/sdl2/generic
-        url: https://github.com/libsdl-org/SDL/archive/refs/tags/release-2.32.10.tar.gz
-        sha512: d5622d6bb7266f7942a7b8ad43e8a22524893bf0c2ea1af91204838d9b78d32768843f6faa248757427b8404b8c6443776d4afa6b672cd8571a4e0c03a829383
-
-      - type: archive
-        dest: .cache/cpm/sdl2/steamdeck
-        url: https://github.com/libsdl-org/SDL/archive/cc016b0046.zip
-        sha512: 34d5ef58da6a4f9efa6689c82f67badcbd741f5a4f562a9c2c30828fa839830fb07681c5dc6a7851520e261c8405a416ac0a2c2513b51984fb3b4fa4dcb3e20b
-
-      - type: archive
-        dest: .cache/cpm/spirv-headers/01e0
-        url: https://github.com/KhronosGroup/SPIRV-Headers/archive/01e0577914.zip
-        sha512: d0f905311faf7d743de686fdf241dc4cb0a4f08e2184f5a3b3b2946e680db3cd89eeb72954eafe6fa457f93550e27d516575c8709cb134d8aecc0b43064636ce
-
-      - type: archive
-        dest: .cache/cpm/sirit/1.0.2
-        url: https://github.com/eden-emulator/sirit/releases/download/v1.0.2/sirit-source-1.0.2.tar.zst
-        sha512: 70ea5915e7c2a85fb166f100d03e49ab6697938459d7987d8878bc8acc7d8ecac7c33a5b41909fc8f9053dd042e92b904f0730b8257aab2e5c7e3c09fe907cf8
+        dest: .cache/cpm/vulkanheaders/1.4.345
+        url: https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/v1.4.345.tar.gz
+        sha512: d2846ea228415772645eea4b52a9efd33e6a563043dd3de059e798be6391a8f0ca089f455ae420ff22574939ed0f48ed7c6ff3d5a9987d5231dbf3b3f89b484b
 
       - type: archive
         dest: .cache/cpm/spirv-tools/2fa2
@@ -159,9 +144,34 @@ modules:
         sha512: 45b198be1d09974ccb2438e8bfa5683f23a0421b058297c28eacfd77e454ec2cf87e77850eddd202efff34b004d8d6b4d12e9615e59bd72be904c196f5eb2169
 
       - type: archive
+        dest: .cache/cpm/spirv-headers/04f1
+        url: https://github.com/KhronosGroup/SPIRV-Headers/archive/04f10f650d.tar.gz
+        sha512: cae8cd179c9013068876908fecc1d158168310ad6ac250398a41f0f5206ceff6469e2aaeab9c820bce9d1b08950c725c89c46e94b89a692be9805432cf749396
+
+      - type: archive
+        dest: .cache/cpm/simpleini/4.25
+        url: https://github.com/brofield/simpleini/archive/refs/tags/v4.25.tar.gz
+        sha512: b937c18a7b6277d77ca7ebfb216af4984810f77af4c32d101b7685369a4bd5eb61406223f82698e167e6311a728d07415ab59639fdf19eff71ad6dc2abfda989
+
+      - type: archive
+        dest: .cache/cpm/discordrpc/0d8b
+        url: https://github.com/eden-emulator/discord-rpc/archive/0d8b2d6a37.tar.gz
+        sha512: 8213c43dcb0f7d479f5861091d111ed12fbdec1e62e6d729d65a4bc181d82f48a35d5fd3cd5c291f2393ac7c9681eabc6b76609755f55376284c8a8d67e148f3
+
+      - type: archive
+        dest: .cache/cpm/cubeb/fa02
+        url: https://github.com/mozilla/cubeb/archive/fa02160712.tar.gz
+        sha512: 8a4bcb2f83ba590f52c66626e895304a73eb61928dbc57777e1822e55378e3568366f17f9da4b80036cc2ef4ea9723c32abf6e7d9bbe00fb03654f0991596ab0
+
+      - type: archive
         dest: .cache/cpm/libusb/1.0.29
         url: https://github.com/libusb/libusb/archive/refs/tags/v1.0.29.tar.gz
         sha512: 98c5f7940ff06b25c9aa65aa98e23de4c79a4c1067595f4c73cc145af23a1c286639e1ba11185cd91bab702081f307b973f08a4c9746576dc8d01b3620a3aeb5
+
+      - type: archive
+        dest: .cache/cpm/sirit/1.0.4
+        url: https://github.com/eden-emulator/sirit/releases/download/v1.0.4/sirit-source-1.0.4.tar.zst
+        sha512: 8958857aa94326beca0a5472080bd22620832b257e9f83a2f74947cf8ca6369d75a710efaf912fd445a08804af6427ef672ef22e207a646d4872d3e803704939
 
       - type: archive
         dest: .cache/cpm/vulkanmemoryallocator/3.3.0
@@ -169,47 +179,36 @@ modules:
         sha512: deb5902ef8db0e329fbd5f3f4385eb0e26bdd9f14f3a2334823fb3fe18f36bc5d235d620d6e5f6fe3551ec3ea7038638899db8778c09f6d5c278f5ff95c3344b
 
       - type: archive
-        dest: .cache/cpm/httplib/0.26.0
-        url: https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.26.0.tar.gz
-        sha512: b364500f76e2ecb0fe21b032d831272e3f1dfeea71af74e325f8fc4ce9dcdb3c941b97a5b422bdeafb9facd058597b90f8bfc284fb9afe3c33fefa15dd5a010b
+        dest: .cache/cpm/httplib/0.37.0
+        url: https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.37.0.tar.gz
+        sha512: 5efa8140aadffe105dcf39935b732476e95755f6c7473ada3d0b64df2bc02c557633ae3948a25b45e1cf67e89a3ff6329fb30362e4ac033b9a1d1e453aa2eded
 
       - type: archive
-        dest: .cache/cpm/cpp-jwt/9eae
-        url: https://github.com/crueter/cpp-jwt/archive/9eaea6328f.zip
-        sha512: e237d92c59ebbf0dc8ac0bae3bc80340e1e9cf430e1c1c9638443001118e16de2b3e9036ac4b98105427667b0386d97831415170b68c432438dcad9ef8052de7
+        dest: .cache/cpm/cpp-jwt/7f24
+        url: https://github.com/arun11299/cpp-jwt/archive/7f24eb4c32.tar.gz
+        sha512: d11cbd5ddb3197b4c5ca15679bcd76a49963e7b530b7dd132db91e042925efa20dfb2c24ccfbe7ef82a7012af80deff0f72ee25851312ae80381a462df8534b8
 
       - type: archive
-        dest: .cache/cpm/unordered_dense/4.5.0
-        url: https://github.com/martinus/unordered_dense/archive/refs/tags/v4.5.0.tar.gz
-        sha512: f9c819e28e1c1a387acfee09277d6af5e366597a0d39acf1c687acf0608a941ba966af8aaebdb8fba0126c7360269c4a51754ef4cab17c35c01a30215f953368
+        dest: .cache/cpm/unordered_dense/7b55
+        url: https://github.com/martinus/unordered_dense/archive/7b55cab841.tar.gz
+        sha512: d2106f6640f6bfb81755e4b8bfb64982e46ec4a507cacdb38f940123212ccf35a20b43c70c6f01d7bfb8c246d1a16f7845d8052971949cea9def1475e3fa02c8
 
       - type: archive
-        dest: .cache/cpm/nx_tzdb/091025
-        url: https://git.crueter.xyz/misc/tzdb_to_nx/releases/download/091025/091025.tar.gz
-        sha512: 87abb2aeca716d5d77b05317086dbc2f8acfc2f3f76ce4778345ee3df19973e6cd8ecbf16cfab5ad94c9636a6c44fd3588f9aadd3cba89403cfd56c8bec645c5
-
-        dest-filename: 091025.tar
-      - type: archive
-        dest: .cache/cpm/mcl/7b08
-        url: https://github.com/azahar-emu/mcl/archive/7b08d83418.zip
-        sha512: f943bac39c1879986decad7a442ff4288eaeca4a2907684c7914e115a55ecc43c2782ded85c0835763fe04e40d5c82220ce864423e489e648e408a84f54dc4f3
-
-      - type: archive
-        dest: .cache/cpm/zycore/75a3
-        url: https://github.com/zyantific/zycore-c/archive/75a36c45ae.zip
-        sha512: 15aa399f39713e042c4345bc3175c82f14dca849fde2a21d4f591f62c43e227b70d868d8bb86beb5f4eb68b1d6bd3792cdd638acf89009e787e3d10ee7401924
-
-      - type: archive
-        dest: .cache/cpm/zydis/c2d2
-        url: https://github.com/zyantific/zydis/archive/c2d2bab025.zip
-        sha512: 7b48f213ff7aab2926f8c9c65195959143bebbfb2b9a25051ffd8b8b0f1baf1670d9739781de674577d955925f91ac89376e16b476a03828c84e2fd765d45020
-
-      - type: archive
-        dest: .cache/cpm/quazip-qt6/f838
-        url: https://github.com/crueter/quazip-qt6/archive/f838774d63.zip
-        sha512: 9f629a438699801244a106c8df6d5f8f8d19e80df54f530a89403a10c8c4e37a6e95606bbdd307f23636961e8ce34eb37a2186d589a1f227ac9c8e2c678e326e
+        dest: .cache/cpm/xbyak/7.35.2
+        url: https://github.com/herumi/xbyak/archive/refs/tags/v7.35.2.tar.gz
+        sha512: b6475276b2faaeb315734ea8f4f8bd87ededcee768961b39679bee547e7f3e98884d8b7851e176d861dab30a80a76e6ea302f8c111483607dde969b4797ea95a
 
       - type: archive
         dest: .cache/cpm/frozen/61dc
-        url: https://github.com/serge-sans-paille/frozen/archive/61dce5ae18.zip
-        sha512: 1ae3d073e659c1f24b2cdd76379c90d6af9e06bc707d285a4fafce05f7a4c9e592ff208c94a9ae0f0d07620b3c6cec191f126b03d70ad4dfa496a86ed5658a6d
+        url: https://github.com/serge-sans-paille/frozen/archive/61dce5ae18.tar.gz
+        sha512: b8dfe741c82bc178dfc9749d4ab5a130cee718d9ee7b71d9b547cf5f7f23027ed0152ad250012a8546399fcc1e12187efc68d89d6731256c4d2df7d04eef8d5c
+
+      - type: archive
+        dest: .cache/cpm/nx_tzdb/230326
+        url: https://git.eden-emu.dev/eden-emu/tzdb_to_nx/releases/download/230326/230326.tar.gz
+        sha512: cce65a12bf90f4ead43b24a0b95dfad77ac3d9bfbaaf66c55e6701346e7a1e44ca5d2f23f47ee35ee02271eb1082bf1762af207aad9fb236f1c8476812d008ed
+
+      - type: archive
+        dest: .cache/cpm/quazip-qt6/2e95
+        url: https://github.com/stachenov/quazip/archive/2e95c9001b.tar.gz
+        sha512: 609c240c7f029ac26a37d8fbab51bc16284e05e128b78b9b9c0e95d083538c36047a67d682759ac990e4adb0eeb90f04f1ea7fe2253bbda7e7e3bcce32e53dd8
