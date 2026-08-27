@@ -26,8 +26,8 @@ modules:
       no-debuginfo: true
       arch:
         x86_64:
-          cflags: -mtune=generic -O3 -pipe
-          cxxflags: -mtune=generic -O3 -pipe
+          cflags: -march=x86-64-v3 -mtune=generic -O3 -pipe
+          cxxflags: -march=x86-64-v3 -mtune=generic -O3 -pipe
         aarch64:
           cflags: -march=armv8-a -mtune=generic -O3 -pipe
           cxxflags: -march=armv8-a -mtune=generic -O3 -pipe
