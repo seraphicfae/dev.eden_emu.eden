@@ -3,10 +3,7 @@ runtime: org.kde.Platform
 runtime-version: '6.11'
 sdk: org.kde.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.llvm20
-build-options:
-  cflags: -O3
-  cxxflags: -O3
+  - org.freedesktop.Sdk.Extension.llvm22
 command: eden-launcher
 
 finish-args:
@@ -23,10 +20,17 @@ modules:
     buildsystem: cmake-ninja
     builddir: true
     build-options:
-      append-path: /usr/lib/sdk/llvm20/bin
-      prepend-ld-library-path: /usr/lib/sdk/llvm20/lib
+      append-path: /usr/lib/sdk/llvm22/bin
+      prepend-ld-library-path: /usr/lib/sdk/llvm22/lib
       strip: true
       no-debuginfo: true
+      arch:
+        x86_64:
+          cflags: -mtune=generic -O3 -pipe
+          cxxflags: -mtune=generic -O3 -pipe
+        aarch64:
+          cflags: -march=armv8-a -mtune=generic -O3 -pipe
+          cxxflags: -march=armv8-a -mtune=generic -O3 -pipe
       env:
         AR: llvm-ar
         CC: clang
@@ -34,24 +38,27 @@ modules:
         RANLIB: llvm-ranlib
 
     config-opts:
-      - -Wno-dev
-      - -DYUZU_USE_CPM:BOOL=ON
-      - -DCMAKE_BUILD_TYPE:STRING=Release
-      - -DENABLE_QT_TRANSLATION:BOOL=ON
-      - -DUSE_DISCORD_PRESENCE:BOOL=ON
-      - -DYUZU_USE_BUNDLED_QT:BOOL=OFF
-      - -DYUZU_USE_BUNDLED_SDL2:BOOL=OFF
-      - -DYUZU_USE_EXTERNAL_SDL2:BOOL=ON
-      - -DYUZU_TESTS:BOOL=OFF
-      - -DYUZU_USE_QT_MULTIMEDIA:BOOL=ON
-      - -DYUZU_USE_QT_WEB_ENGINE:BOOL=OFF
-      - -DYUZU_USE_FASTER_LD:BOOL=ON
-      - -DYUZU_ENABLE_LTO:BOOL=ON
-      - -DDYNARMIC_ENABLE_LTO:BOOL=ON
-      - -DYUZU_ROOM:BOOL=ON
-      - -DYUZU_ROOM_STANDALONE:BOOL=OFF
-      - -DYUZU_CMD:BOOL=OFF
-      - -DVulkanHeaders_FORCE_BUNDLED:BOOL=ON
+      - -DBUILD_TESTING=OFF
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DYUZU_USE_BUNDLED_QT=OFF
+      - -DYUZU_USE_QT_MULTIMEDIA=OFF
+      - -DYUZU_USE_QT_WEB_ENGINE=OFF
+      - -DENABLE_QT_TRANSLATION=ON
+      - -DENABLE_UPDATE_CHECKER=OFF
+      - -DUSE_DISCORD_PRESENCE=ON
+      - -DENABLE_LTO=ON
+      - -DYUZU_USE_BUNDLED_SIRIT=OFF
+      - -DYUZU_USE_BUNDLED_FFMPEG=OFF
+      - -DYUZU_USE_BUNDLED_OPENSSL=OFF
+      - -DYUZU_DISABLE_LLVM=ON
+      - -DYUZU_STATIC_BUILD=OFF
+      - -DYUZU_USE_BUNDLED_QT=OFF
+      - -DYUZU_CMD=OFF
+      - -DYUZU_ROOM_STANDALONE=OFF
+      - -DNIGHTLY_BUILD=OFF
+      - -DYUZU_USE_BUNDLED_SDL3=ON
+      - -DYUZU_USE_BUNDLED_SDL2=OFF
+      - -DVulkanHeaders_FORCE_BUNDLED=ON
 
     secret-opts:
       - -DYUZU_BUILD_PRESET:STRING=$BUILD_PRESET
