@@ -27,12 +27,6 @@ modules:
         tag: 3a1f
         commit: 3a1f3be90db903ecbcedb8206b91ed38941c27e8
 
-      - type: file
-        path: dev.eden_emu.eden.appdata.xml
-
-      - type: file
-        path: eden-launcher.sh
-
   - name: eden
     buildsystem: cmake-ninja
     builddir: true
@@ -205,6 +199,11 @@ modules:
         dest: .cache/cpm/xbyak/7.35.2
         url: https://github.com/herumi/xbyak/archive/refs/tags/v7.35.2.tar.gz
         sha512: b6475276b2faaeb315734ea8f4f8bd87ededcee768961b39679bee547e7f3e98884d8b7851e176d861dab30a80a76e6ea302f8c111483607dde969b4797ea95a
+
+      - type: archive
+        dest: .cache/cpm/oaknut/2.0.3
+        url: https://github.com/eden-emulator/oaknut/archive/refs/tags/v2.0.3.tar.gz
+        sha512: 9697e80a7d5d9bcb3ce51051a9a24962fb90ca79d215f1f03ae6b58da8ba13a63b5dda1b4dde3d26ac6445029696b8ef2883f4e5a777b342bba01283ed293856
 
       - type: archive
         dest: .cache/cpm/frozen/61dc
