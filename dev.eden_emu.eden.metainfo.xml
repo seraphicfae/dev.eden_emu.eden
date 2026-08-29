@@ -33,8 +33,12 @@
     <url type="contribute">https://git.eden-emu.dev/eden-emu/eden</url>
 	<screenshots>
 		<screenshot type="default">
-			<image>https://raw.githubusercontent.com/seraphicfae/dev.eden_emu.eden/d00b360fa8c208bc31a45446b1a129679af9f513/screenshots/1.png</image>
+			<image>https://raw.githubusercontent.com/seraphicfae/dev.eden_emu.eden/e8cbf38b6dbbfed15b4248134f7c9d8c26ffc5ca/screenshots/1.png</image>
 			<caption>Home screen</caption>
+		</screenshot>
+		<screenshot>
+			<image>https://raw.githubusercontent.com/seraphicfae/dev.eden_emu.eden/e8cbf38b6dbbfed15b4248134f7c9d8c26ffc5ca/screenshots/2.png</image>
+			<caption>Controller settings</caption>
 		</screenshot>
 	</screenshots>
 	<releases>
@@ -43,21 +47,38 @@
 			<description>
 				<p>This is a hotfix release for 0.2.0, addressing some crashes and bugs that occurred in certain situations. CPU and graphics performance will remain largely the same. This release does not use SDL3, and remains on SDL2.</p>
 				<ul>
-				    <li>The Windows auto updater now accounts for the current build ID and will properly fetch the corresponding build to your currently installed Eden</li>
-					<li>Fixed crashes and errors that could occur when large amounts of games and external content files were present</li>
-					<li>Fixed crashes on 12th-gen Intel CPUs</li>
-					<li>Fixed MK8DX freeze when the native controller applet was used</li>
-					<li>Fixed a rare case of weird noises playing on shutdown</li>
-					<li>Fixed mods that expect a real value out of DefaultDataSpace</li>
-					<li>Fixed some minor issues with emulated controller thread contention</li>
-				</ul>
-				<p>Fixed several build errors:</p>
-				<ul>
-					<li>Newer Xbyak removed Xeon Phi features</li>
-					<li>Unused variable errors in NCE</li>
-					<li>Removed httplib version restrictions</li>
+				  <li>The Windows auto updater now accounts for the current build ID and will properly fetch the corresponding build to your currently installed Eden</li>
+				  <li>Fixed crashes and errors that could occur when large amounts of games and external content files were present</li>
+				  <li>Fixed crashes on 12th-gen Intel CPUs</li>
+				  <li>Fixed MK8DX freeze when the native controller applet was used</li>
+				  <li>Fixed a rare case of weird noises playing on shutdown</li>
+				  <li>Fixed mods that expect a real value out of DefaultDataSpace</li>
+				  <li>Fixed some minor issues with emulated controller thread contention</li>
+				  <li>Newer Xbyak removed Xeon Phi features</li>
+				  <li>Unused variable errors in NCE</li>
+				  <li>Removed httplib version restrictions</li>
 				</ul>
 			</description>
+		</release>
+		<release version="0.2.0" date="2026-05-13">
+			<url type="details">https://git.eden-emu.dev/eden-emu/eden/compare/v0.2.0-rc2...v0.2.0</url>
+			<description></description>
+		</release>
+		<release version="0.1.1" date="2026-01-30">
+			<url type="details">https://git.eden-emu.dev/eden-emu/eden/releases/tag/v0.1.1</url>
+			<description></description>
+		</release>
+		<release version="0.1.0" date="2026-01-26">
+			<url type="details">https://git.eden-emu.dev/eden-emu/eden/compare/v0.0.4...v0.1.0</url>
+			<description></description>
+		</release>
+		<release version="0.0.4" date="2026-12-21">
+			<url type="details">https://git.eden-emu.dev/eden-emu/eden/releases/tag/v0.0.4</url>
+			<description></description>
+		</release>
+		<release version="0.0.3" date="2026-11-11">
+			<url type="details">https://git.eden-emu.dev/eden-emu/eden/releases/tag/v0.0.3</url>
+			<description></description>
 		</release>
 	</releases>
 	<supports>
