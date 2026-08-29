@@ -24,8 +24,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/seraphicfae/dev.eden_emu.eden
-        tag: d269
-        commit: d269a22efa634c631a2f65f2268b21b6985c2eb3
+        tag: fb74
+        commit: fb74bbdda24beb46fe670ab7848e2a0ce58a55bd
 
   - name: eden
     buildsystem: cmake-ninja
