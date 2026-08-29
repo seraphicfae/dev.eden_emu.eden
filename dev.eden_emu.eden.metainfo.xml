@@ -16,7 +16,7 @@
         <category>Game</category>
         <category>Emulator</category>
     </categories>
-	<icon type="remote">https://git.eden-emu.dev/eden-emu/eden/raw/commit/58c1e20ee58efa3900ba616207d460886214480b/dist/dev.eden_emu.eden.svg</icon>
+    <icon type="stock">dev.eden_emu.eden</icon>
 	<branding>
 		<color type="primary" scheme_preference="light">#f3edc8</color>
 		<color type="primary" scheme_preference="dark">#13161a</color>
