@@ -5,7 +5,7 @@
 	<project_license>GPL-3.0-or-later</project_license>
 	<name>Eden</name>
 	<summary>Nintendo Switch emulator</summary>
-	<developer id="https://eden-emu.dev/">
+	<developer id="dev.eden-emu">
 		<name>Eden Contributors</name>
 	</developer>
 	<description>
