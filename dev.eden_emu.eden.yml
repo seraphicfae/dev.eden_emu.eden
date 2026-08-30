@@ -16,17 +16,6 @@ finish-args:
   - --filesystem=xdg-run/app/com.discordapp.Discord:ro
 
 modules:
-  - name: eden-flatpak
-    buildsystem: simple
-    build-commands:
-      - install -Dm755 eden-launcher.sh /app/bin/eden-launcher
-      - install -Dm644 dev.eden_emu.eden.metainfo.xml /app/share/metainfo/dev.eden_emu.eden.metainfo.xml
-    sources:
-      - type: git
-        url: https://github.com/seraphicfae/dev.eden_emu.eden
-        tag: b8d2
-        commit: b8d265224eef30c89b9c335cfd2860eb6f908f99
-
   - name: eden
     buildsystem: cmake-ninja
     builddir: true
@@ -79,3 +68,14 @@ modules:
         tag: v0.2.1
         commit: 58c1e20ee58efa3900ba616207d460886214480b
       - generated-sources.yml
+
+  - name: eden-flatpak
+    buildsystem: simple
+    build-commands:
+      - install -Dm755 eden-launcher.sh /app/bin/eden-launcher
+      - install -Dm644 dev.eden_emu.eden.metainfo.xml /app/share/metainfo/dev.eden_emu.eden.metainfo.xml
+    sources:
+      - type: git
+        url: https://github.com/seraphicfae/dev.eden_emu.eden
+        tag: 854c
+        commit: 854c39e5c64c7099c98f5e27923e22b66cd4741f
