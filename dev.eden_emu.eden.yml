@@ -59,7 +59,6 @@ modules:
       - -DVulkanHeaders_FORCE_BUNDLED=ON
 
     post-install:
-      - install -Dm644 ../dist/dev.eden_emu.eden.svg /app/share/icons/hicolor/scalable/apps/dev.eden_emu.eden.svg
       - desktop-file-edit --set-key StartupWMClass --set-value eden --set-key Exec --set-value eden-launcher /app/share/applications/dev.eden_emu.eden.desktop
 
     sources:
@@ -77,5 +76,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/seraphicfae/dev.eden_emu.eden
-        tag: 4a4b
-        commit: 4a46b86b4718848f3f12a67978f005ce94119dff
+        tag: f705
+        commit: f70562bed939eec2f86782e109b64f420329047d
