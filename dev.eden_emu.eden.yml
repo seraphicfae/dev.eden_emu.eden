@@ -82,5 +82,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/seraphicfae/dev.eden_emu.eden
-        tag: '6215'
-        commit: 6215ee60d68b1524cf49843dbf70b2b7aaac2467
+        tag: 7c2b
+        commit: 7c2b7aa450d5df76aeb57e090aa98697a00d687c
