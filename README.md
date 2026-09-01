@@ -1,7 +1,7 @@
 # Eden emulator flatpak
 
 ## Making an issue (PLEASE READ)
-- If an issue happens on both Eden flatpak, and the official appimages, you may send the issue [upstream](https://git.eden-emu.dev/eden-emu/eden/issues). Send flatpak specific issues here.
+- If an issue happens on both Eden flatpak, and the official appimages, you may send the issue [upstream](https://git.eden-emu.dev/eden-emu/eden/issues). Send flatpak specific issues [here](https://github.com/flathub/dev.eden_emu.eden/issues).
 
 ## Known issues/limitations
 - Discord RPC failing to work in systems with a native Discord client, and Eden as a flatpak. Please follow the [guide](https://github.com/Arcitec/discord-flatpak-rpc-bridge) on how to properly set it up.
