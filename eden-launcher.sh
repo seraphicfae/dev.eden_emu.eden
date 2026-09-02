@@ -2,13 +2,11 @@
 
 report_error() {
     read -r -d '|' MESSAGE <<EOF
-Unfortunately, eden seems to have crashed.
-We kindly ask you to submit a bug report to <a href="https://github.com/eden-emulator/Issue-Reports">https://github.com/eden-emulator/Issue-Reports</a>.
+Unfortunately, Eden seems to have crashed.
+We kindly ask you to submit a bug report <a href="https://github.com/flathub/dev.eden_emu.eden">https://github.com/flathub/dev.eden_emu.eden</a>.
 
-When submitting a bug report, please attach your <b>system information</b> and the <b>eden log file</b>.
-You seem to be using ${XDG_SESSION_DESKTOP} ${DESKTOP_SESSION} (${XDG_SESSION_TYPE}):
-To obtain eden log files, please see <a href="https://yuzu-mirror.github.io/help/reference/log-files/">this guide</a>.
-To obtain your system information, please install <tt>inxi</tt> and run <tt>inxi -v3</tt>. |
+When submitting a bug report, please attach your <b>system information</b> and the <b>log files</b>.
+To obtain log files, please see <a href="https://git.eden-emu.dev/eden-emu/eden/src/branch/master/docs/user/HowToAccessLogs.md">this guide</a>.
 EOF
     zenity --warning --no-wrap --title "That's awkward ..." --text "$MESSAGE"
 }
