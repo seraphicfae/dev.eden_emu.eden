@@ -7,7 +7,8 @@ sdk-extensions:
 command: eden-launcher
 
 finish-args:
-  - --device=all
+  - --device=dri
+  - --device=input
   - --socket=wayland
   - --socket=x11
   - --socket=pulseaudio
