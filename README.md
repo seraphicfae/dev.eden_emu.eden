@@ -1,20 +1,5 @@
-# Eden emulator flatpak
+# Eden flatpak module
 
-## Making an issue (PLEASE READ)
-- If an issue happens on both Eden flatpak, and the official appimages, you may send the issue [upstream](https://git.eden-emu.dev/eden-emu/eden/issues). Send flatpak specific issues [here](https://github.com/flathub/dev.eden_emu.eden/issues).
-
-## Known issues/limitations
-- Discord RPC failing to work in systems with a native Discord client, and Eden as a flatpak. Please follow the [guide](https://github.com/Arcitec/discord-flatpak-rpc-bridge) on how to properly set it up.
-- XDG toplevel icons appear to be distorted, blurry, or not showing as intended from the appimage in any way. We are still trying to figure out this issue.
-
-## Getting started:
-
-Before building, install the runtime, SDK, and flatpak builder:
-```sh
-flatpak install org.kde.Platform//6.11 org.kde.Sdk//6.11 org.freedesktop.Sdk.Extension.llvm22 org.flatpak.Builder
-```
-
-Then build and install locally with:
-```sh
-flatpak run org.flatpak.Builder --install build-directory --user --force-clean dev.eden_emu.eden.yml
-```
+What is this repo?
+This is a non permanent repo that contains the metainfo required for appstream, a simple launcher script, and some screen shots for [Eden](https://flathub.org/en/apps/dev.eden_emu.eden)
+Keep in mind, everything will _hopefully_ be eventually upstreamed. Please submit [issues here](https://github.com/flathub/dev.eden_emu.eden) about the **flatpak**
