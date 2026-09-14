@@ -33,20 +33,24 @@
     <url type="contribute">https://git.eden-emu.dev/eden-emu/eden</url>
 	<screenshots>
 		<screenshot type="default">
-			<image>https://raw.githubusercontent.com/seraphicfae/dev.eden_emu.eden/88618871f99a7671cd84d2002dd20a279d82f70c/screenshots/1.png</image>
+			<image>https://raw.githubusercontent.com/seraphicfae/dev.eden_emu.eden/407e889f4cc5229a16cc2bcd156ed4f2d0dd00bb/screenshots/1.png</image>
 			<caption>Home screen</caption>
 		</screenshot>
 		<screenshot>
-			<image>https://raw.githubusercontent.com/seraphicfae/dev.eden_emu.eden/88618871f99a7671cd84d2002dd20a279d82f70c/screenshots/2.png</image>
-			<caption>Controller settings</caption>
-		</screenshot>
-		<screenshot>
-			<image>https://raw.githubusercontent.com/seraphicfae/dev.eden_emu.eden/88618871f99a7671cd84d2002dd20a279d82f70c/screenshots/3.png</image>
-			<caption>UI settings</caption>
-		</screenshot>
-		<screenshot>
-			<image>https://raw.githubusercontent.com/seraphicfae/dev.eden_emu.eden/88618871f99a7671cd84d2002dd20a279d82f70c/screenshots/4.png</image>
+			<image>https://raw.githubusercontent.com/seraphicfae/dev.eden_emu.eden/407e889f4cc5229a16cc2bcd156ed4f2d0dd00bb/screenshots/2.png</image>
 			<caption>In game</caption>
+		</screenshot>
+		<screenshot>
+			<image>https://raw.githubusercontent.com/seraphicfae/dev.eden_emu.eden/407e889f4cc5229a16cc2bcd156ed4f2d0dd00bb/screenshots/3.png</image>
+			<caption>Hotkeys settings</caption>
+		</screenshot>
+		<screenshot>
+			<image>https://raw.githubusercontent.com/seraphicfae/dev.eden_emu.eden/407e889f4cc5229a16cc2bcd156ed4f2d0dd00bb/screenshots/4.png</image>
+			<caption>Audio settings</caption>
+		</screenshot>
+		<screenshot>
+			<image>https://raw.githubusercontent.com/seraphicfae/dev.eden_emu.eden/407e889f4cc5229a16cc2bcd156ed4f2d0dd00bb/screenshots/5.png</image>
+			<caption>User settings</caption>
 		</screenshot>
 	</screenshots>
 	<releases>
