@@ -19,7 +19,7 @@
     <icon type="stock">dev.eden_emu.eden</icon>
 	<branding>
 		<color type="primary" scheme_preference="light">#f3edc8</color>
-		<color type="primary" scheme_preference="dark">#13161a</color>
+		<color type="primary" scheme_preference="dark">#4f40bf</color>
 	</branding>
 	<content_rating type="oars-1.1" />
 	<url type="homepage">https://eden-emu.dev/</url>
