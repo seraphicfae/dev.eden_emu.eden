@@ -34,7 +34,7 @@
     <url type="donation">https://liberapay.com/crueter</url>
     <url type="translate">https://explore.transifex.com/edenemu/eden-emulator</url>
     <url type="contact">https://discord.gg/HstXbPch7X</url>
-    <url type="vcs-browser">https://git.eden-emu.dev</url>
+    <url type="vcs-browser">https://git.eden-emu.dev/eden-emu/eden</url>
     <url type="contribute">https://git.eden-emu.dev/eden-emu/eden</url>
 	<screenshots>
 		<screenshot type="default">
