@@ -13,29 +13,29 @@
 	</description>
 	<launchable type="desktop-id">dev.eden_emu.eden.desktop</launchable>
 	<categories>
-        <category>Game</category>
-        <category>Emulator</category>
-    </categories>
-    <keywords>
-      <keyword>Switch</keyword>
-      <keyword>Emulator</keyword>
-      <keyword>Nintendo</keyword>
-    </keywords>
-    <icon type="stock">dev.eden_emu.eden</icon>
+		<category>Game</category>
+		<category>Emulator</category>
+	</categories>
+	<keywords>
+		<keyword>Switch</keyword>
+		<keyword>Emulator</keyword>
+		<keyword>Nintendo</keyword>
+	</keywords>
+	<icon type="stock">dev.eden_emu.eden</icon>
 	<branding>
 		<color type="primary" scheme_preference="light">#f3edc8</color>
 		<color type="primary" scheme_preference="dark">#4f40bf</color>
 	</branding>
 	<content_rating type="oars-1.1" />
 	<url type="homepage">https://eden-emu.dev/</url>
-    <url type="bugtracker">https://git.eden-emu.dev/eden-emu/eden/issues</url>
-    <url type="faq">https://git.eden-emu.dev/eden-emu/eden/src/branch/master/docs/user/README.md</url>
-    <url type="help">https://git.eden-emu.dev/eden-emu/eden/src/branch/master/docs/user/README.md</url>
-    <url type="donation">https://liberapay.com/crueter</url>
-    <url type="translate">https://explore.transifex.com/edenemu/eden-emulator</url>
-    <url type="contact">https://discord.gg/HstXbPch7X</url>
-    <url type="vcs-browser">https://git.eden-emu.dev/eden-emu/eden</url>
-    <url type="contribute">https://git.eden-emu.dev/eden-emu/eden</url>
+	<url type="bugtracker">https://git.eden-emu.dev/eden-emu/eden/issues</url>
+	<url type="faq">https://git.eden-emu.dev/eden-emu/eden/src/branch/master/docs/user/README.md</url>
+	<url type="help">https://git.eden-emu.dev/eden-emu/eden/src/branch/master/docs/user/README.md</url>
+	<url type="donation">https://liberapay.com/crueter</url>
+	<url type="translate">https://explore.transifex.com/edenemu/eden-emulator</url>
+	<url type="contact">https://discord.gg/HstXbPch7X</url>
+	<url type="vcs-browser">https://git.eden-emu.dev/eden-emu/eden</url>
+	<url type="contribute">https://git.eden-emu.dev/eden-emu/eden</url>
 	<screenshots>
 		<screenshot type="default">
 			<image>https://raw.githubusercontent.com/seraphicfae/dev.eden_emu.eden/407e889f4cc5229a16cc2bcd156ed4f2d0dd00bb/screenshots/1.png</image>
@@ -64,16 +64,16 @@
 			<description>
 				<p>This is a hotfix release for 0.2.0, addressing some crashes and bugs that occurred in certain situations. CPU and graphics performance will remain largely the same. This release does not use SDL3, and remains on SDL2.</p>
 				<ul>
-				  <li>The Windows auto updater now accounts for the current build ID and will properly fetch the corresponding build to your currently installed Eden</li>
-				  <li>Fixed crashes and errors that could occur when large amounts of games and external content files were present</li>
-				  <li>Fixed crashes on 12th-gen Intel CPUs</li>
-				  <li>Fixed MK8DX freeze when the native controller applet was used</li>
-				  <li>Fixed a rare case of weird noises playing on shutdown</li>
-				  <li>Fixed mods that expect a real value out of DefaultDataSpace</li>
-				  <li>Fixed some minor issues with emulated controller thread contention</li>
-				  <li>Newer Xbyak removed Xeon Phi features</li>
-				  <li>Unused variable errors in NCE</li>
-				  <li>Removed httplib version restrictions</li>
+					<li>The Windows auto updater now accounts for the current build ID and will properly fetch the corresponding build to your currently installed Eden</li>
+					<li>Fixed crashes and errors that could occur when large amounts of games and external content files were present</li>
+					<li>Fixed crashes on 12th-gen Intel CPUs</li>
+					<li>Fixed MK8DX freeze when the native controller applet was used</li>
+					<li>Fixed a rare case of weird noises playing on shutdown</li>
+					<li>Fixed mods that expect a real value out of DefaultDataSpace</li>
+					<li>Fixed some minor issues with emulated controller thread contention</li>
+					<li>Newer Xbyak removed Xeon Phi features</li>
+					<li>Unused variable errors in NCE</li>
+					<li>Removed httplib version restrictions</li>
 				</ul>
 			</description>
 		</release>
@@ -84,10 +84,10 @@
 		<control>gamepad</control>
 		<internet>offline-only</internet>
 	</supports>
-    <requires>
-        <memory>8192</memory>
-    </requires>
-    <recommends>
-        <memory>16384</memory>
-    </recommends>
+	<requires>
+		<memory>8192</memory>
+	</requires>
+	<recommends>
+		<memory>16384</memory>
+	</recommends>
 </component>
