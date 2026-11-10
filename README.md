@@ -23,7 +23,7 @@ If you're having trouble with Discord RPC, see [this guide](https://github.com/f
 - The latest KDE Runtime, KDE SDK, llvm, and flatpak builder. 
 ```
 git clone https://github.com/flathub/dev.eden_emu.eden
-flatpak install flathub org.kde.Platform org.kde.Sdk org.freedesktop.Sdk.Extension.llvm org.flatpak.Builder
+flatpak install flathub org.kde.Platform org.kde.Sdk org.freedesktop.Sdk.Extension.llvm23 org.flatpak.Builder
 ```
 
 Build! 
