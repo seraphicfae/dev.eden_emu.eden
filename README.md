@@ -1,6 +1,5 @@
 ## Eden flatpak module
 
-> [!NOTE]
 > This repo is not endorsed by Eden
 
 ## What is this place?
