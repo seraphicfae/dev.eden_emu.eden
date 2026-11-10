@@ -76,9 +76,6 @@
 		<control>gamepad</control>
 		<internet>offline-only</internet>
 	</supports>
-	<requires>
-		<memory>8192</memory>
-	</requires>
 	<recommends>
 		<memory>16384</memory>
 	</recommends>
