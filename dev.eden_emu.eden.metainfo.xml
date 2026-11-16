@@ -35,7 +35,7 @@
 		<color type="primary" scheme_preference="dark">#4f40bf</color>
 	</branding>
 	<content_rating type="oars-1.1">
-        <content_attribute id="social-chat">intense</content_attribute>
+        <content_attribute id="social-chat">moderate</content_attribute>
     </content_rating>
 	<url type="homepage">https://eden-emu.dev/</url>
 	<url type="bugtracker">https://git.eden-emu.dev/eden-emu/eden/issues</url>
